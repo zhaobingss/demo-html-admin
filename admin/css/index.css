@@ -374,6 +374,7 @@ a{
     position: fixed;
     z-index: -1;
     width: 1000000px;
+    top: 50px;
 }
 
 .tab-bar-tabs .tab{
@@ -383,6 +384,7 @@ a{
     border-right: 1px solid #eee;
     padding-left: 10px;
     padding-right: 10px;
+    line-height: 45px;
 }
 
 .tab-bar-tabs .tab span{

@@ -25,12 +25,14 @@ function initOperaEvent() {
         $('.tree').treegrid('getRootNodes').treegrid('collapse');
     });
     $('#add').click(function () {
+        var dialog = document.getElementById('dialog');
+        var content = dialog.innerHTML;
         layer.open({
             title:'<i class="iconfont icon-add"></i><span>添加资源</span>',
             type: 1,
             skin: 'layui-layer-rim', //加上边框
             area: ['100%', '100%'], //宽高
-            content: document.getElementById('dialog').innerHTML,
+            content: content,
             btn: ['&nbsp;确定', '&nbsp;取消'],
             yes:function () {
                 var data = getDialogData();
@@ -44,23 +46,23 @@ function initOperaEvent() {
 }
 
 function cleanDualogInput() {
-    $('#src_name').val('');
-    $('#src_type').val('');
-    $('#src_code').val('');
-    $('#src_url').val('');
-    $('#src_icon').val('');
-    $('#src_order').val('');
-    $('#src_desc').val('');
+    $('.layui-layer-content #src_name').val('');
+    $('.layui-layer-content #src_type').val('');
+    $('.layui-layer-content #src_code').val('');
+    $('.layui-layer-content #src_url').val('');
+    $('.layui-layer-content #src_icon').val('');
+    $('.layui-layer-content #src_order').val('');
+    $('.layui-layer-content #src_desc').val('');
 }
 
 function getDialogData() {
-    var name = $('#src_name').attr('value');
-    var type    = $('#src_type').val();
-    var code    = $('#src_code').val();
-    var url     = $('#src_url').val();
-    var icon    = $('#src_icon').val();
-    var order   = $('#src_order').val();
-    var desc    = $('#src_desc').val();
+    var name    = $('.layui-layer-content #src_name').val();
+    var type    = $('.layui-layer-content #src_type').val();
+    var code    = $('.layui-layer-content #src_code').val();
+    var url     = $('.layui-layer-content #src_url').val();
+    var icon    = $('.layui-layer-content #src_icon').val();
+    var order   = $('.layui-layer-content #src_order').val();
+    var desc    = $('.layui-layer-content #src_desc').val();
 
     return {
         name:name,

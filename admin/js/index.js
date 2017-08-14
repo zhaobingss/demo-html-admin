@@ -35,8 +35,7 @@ function initMenu() {
 
     var rootUl = document.getElementById('navigation');
 
-    document.get
-
+    // document.get
     for (var idx in menus){
         var menu = menus[idx];
         setMenu(rootUl, menu);
