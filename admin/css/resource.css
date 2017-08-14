@@ -1,0 +1,88 @@
+
+.tree td{
+    vertical-align: middle!important;
+}
+
+#src_data>tr>td>.btn{
+    margin-right: 5px;
+}
+
+#src_data>tr>td:first-child>i{
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+.opera{
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    z-index: 99999;
+    background: #fff;
+}
+
+.opera form{
+    background: #eee;
+    padding: 5px;
+    border-top:2px solid #2aabd2;
+}
+
+.opera>form>button>i{
+    margin-right: 5px;
+}
+
+.content{
+    padding-top: 5px;
+}
+
+.tree>thead{
+    background:transparent;
+}
+
+.btn-sm{
+    height: 28px;
+    line-height: 28px;
+    padding: 0px 10px 28px 10px;
+}
+
+.layui-layer-title{
+    padding: 0 80px 0 10px!important;
+}
+
+.layui-layer-title i{
+    margin-right: 5px;
+}
+
+.layui-layer-content{
+    padding: 15px!important;
+}
+
+.layui-layer-btn0{
+    border-color: #5CB85C!important;
+    background-color: #5CB85C!important;
+    border-radius: 3px!important;
+}
+
+.layui-layer-btn0:before{
+    font-family: 'iconfont';
+    content: '\e64e';
+}
+
+.layui-layer-btn1:before{
+    font-family: 'iconfont';
+    content: '\e601';
+}
+
+.layui-layer-btn1{
+    border-color: #D9534F!important;
+    background-color: #D9534F!important;
+    border-radius: 3px!important;
+    color: #fff!important;
+}
+
+#src_form{
+}
+
+#src_form .col-sm-2{
+    padding-right: 0px;
+}

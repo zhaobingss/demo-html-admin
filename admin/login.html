@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="">
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,height=device-height">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/facv.ico">
+
+    <title>登录</title>
+
+    <link rel="stylesheet" href="thirdpart/bootstrap-3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="thirdpart/iconfont/iconfont.css">
+    <link rel="stylesheet" href="thirdpart/icheck/skins/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!--注意这个一定要放到css的下面-->
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="thirdpart/compatible/html5shiv.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/html5shiv-printshiv.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/respond.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/respond.matchmedia.addListener.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/placeholders.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="page-container login-container">
+        <div class="page-content">
+            <div class="content-wrapper">
+                <div class="content text-danger">
+                    <form>
+                        <div class="panel panel-body login-form">
+                            <div class="text-center">
+                                <div class="circle">
+                                    <i class="iconfont icon-user3"></i>
+                                </div>
+                                <h4>
+                                    登录你的账户
+                                    <small class="center-block">输入你的信息</small>
+                                </h4>
+                            </div>
+                            <div class="form-group has-feedback has-feedback-left">
+                                <input type="text" id="username" class="form-control", placeholder="用户名">
+                                <div class="form-control-feedback">
+                                    <i class="iconfont icon-user3 text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback has-feedback-left">
+                                <input type="text" id="password" class="form-control", placeholder="密码">
+                                <div class="form-control-feedback">
+                                    <i class="iconfont icon-password text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="form-group login-options">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="checkbox" id="remeberMe"/>记住我
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <a href="#">忘记了密码？</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button id="login" class="btn btn-block bg-blue bg-blue">登录</button>
+                            </div>
+                            <div class="form-group content-divider text-muted">
+                                <span>还没有账户？</span>
+                            </div>
+                            <div class="form-group">
+                                <a href="regist.html" id="regist" class="btn btn-block bg-blue bg-slate">注册</a>
+                            </div>
+                            <div class="text-center text-muted lience">
+                                继续的话, 确认你已经阅读了我们的相关<a href="#">政策</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="thirdpart/jquery-1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="thirdpart/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="thirdpart/icheck/icheck.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

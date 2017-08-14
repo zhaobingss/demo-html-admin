@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="">
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,height=device-height">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/facv.ico">
+
+    <title>主页</title>
+
+    <link rel="stylesheet" href="thirdpart/bootstrap-3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="thirdpart/iconfont/iconfont.css">
+    <link rel="stylesheet" href="thirdpart/icomoon/styles.css">
+    <link rel="stylesheet" href="thirdpart/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="thirdpart/icheck/skins/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--注意这个一定要放到css的下面-->
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="thirdpart/compatible/html5shiv.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/html5shiv-printshiv.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/respond.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/respond.matchmedia.addListener.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/placeholders.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- 头部 -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <a href="" class="navbar-brand">
+            <img src="images/logo.png" alt="">
+        </a>
+        <button class="btn-close-sidebar"><i class="fa fa-bars"></i></button>
+        <button class="pull-right dropdown dropdown-user">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <i id="userIcon" class="iconfont icon-user3"></i>
+                <span>管理员</span>
+                <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-head" style="top: 50px;right: 0!important;">
+                <li>
+                    <a href="">
+                        <i class="fa fa-sign-out"></i>
+                        <span>退出</span>
+                    </a>
+                </li>
+            </ul>
+        </button>
+    </div>
+
+    <div class="page-container">
+        <div class="page-content">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <div class="sidebar-category">
+                        <div class="category-content">
+                            <ul class="navigation" id="navigation">
+                                <!--<li class="active">
+                                    <a class="has-ul" href="">
+                                        <i class="iconfont icon-password3"></i>
+                                        <span>Menu Levels</span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: block">
+                                        <li>
+                                            <a href="">
+                                                <i class="iconfont icon-user3"></i>
+                                                <span>Second level</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a class="has-ul" href="">
+                                                <i class="iconfont icon-password"></i>
+                                                <span>Second level with child</span>
+                                            </a>
+                                            <ul class="hidden-ul" style="display: block">
+                                                <li>
+                                                    <a href="">
+                                                        <i class="iconfont icon-password3"></i>
+                                                        <span>Third level</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active">
+                                                    <a class="has-ul" href="">
+                                                        <i class="iconfont icon-password3"></i>
+                                                        <span>Third level child</span>
+                                                    </a>
+                                                    <ul class="hidden-ul" style="display: block">
+                                                        <li><a href="">yyyyy</a></li>
+                                                        <li><a href="">yyyyy</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="iconfont icon-password3"></i>
+                                                        <span>Third level</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="iconfont icon-user3"></i>
+                                                <span>Second level</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- 左侧 -->
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="tab-bar">
+
+                        <div class="tab-bar-tabs" id="tab-bar-tabs">
+                            <!--<button class="tab btn-zbss active">
+                                <span>首页</span>
+                                <i class="fa fa-times-circle tab-close"></i>
+                            </button>-->
+                        </div>
+
+                        <button class="btn-operate btn-operate-left"><i class="fa fa-backward"></i></button>
+                        <button class="btn-operate pull-right btn-refresh">刷新</button>
+                        <div class="operate pull-right">
+                            <button class="btn-operate btn-operate-close dropdown" data-toggle="dropdown">
+                                关闭操作
+                                <span class="caret"></span>
+                            </button>
+                            <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                                <li><a id="loction" href="javascript:void(0);">定位当前</a></li>
+                                <li class="divider"></li>
+                                <li><a id="closeAll" href="javascript:void(0);">关闭全部</a></li>
+                                <li><a id="closeOther" href="javascript:void(0);">关闭其他</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn-operate btn-operate-right pull-right"><i class="fa fa-forward"></i></button>
+                    </div>
+                    <div class="tab-main" id="tab-main">
+                        <!--<iframe src=""></iframe>-->
+                    </div>
+                </div>
+            </div><!-- 主题 -->
+        </div>
+    </div>
+
+    <!-- 脚部 -->
+    <div class="navbar navbar-default navbar-fixed-bottom text-center">
+
+    </div>
+
+
+    <script type="text/javascript" src="thirdpart/jquery-1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="thirdpart/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="thirdpart/icheck/icheck.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
