@@ -24,7 +24,12 @@
 .opera form{
     background: #eee;
     padding: 5px;
-    border-top:2px solid #2aabd2;
+    border-top:3px solid #2aabd2;
+    border-bottom: 1px solid #26A69A;
+}
+
+#collapse{
+    margin-right: 5px;
 }
 
 .opera>form>button>i{
@@ -65,7 +70,7 @@
 
 .layui-layer-btn0:before{
     font-family: 'iconfont';
-    content: '\e64e';
+    content: '\e66f';
 }
 
 .layui-layer-btn1:before{
@@ -78,6 +83,12 @@
     background-color: #D9534F!important;
     border-radius: 3px!important;
     color: #fff!important;
+}
+
+@media (min-width: 768px) {
+    .layui-layer-content #src_form{
+        padding-right: 7%;
+    }
 }
 
 #src_form{

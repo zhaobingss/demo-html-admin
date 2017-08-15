@@ -372,27 +372,27 @@ function getMenuData() {
                 "name":"系统管理",
                 "url":"",
                 "icon":"iconfont icon-system",
-                "id":"wwwwwwwwwwwwwwwwwwwwwwwww",
+                "id":"1",
                 "children":[
                     {
                         "name":"资源管理",
                         "url":"resource.html",
                         "icon":"iconfont icon-resource",
-                        "id":"111111111111111111111111",
+                        "id":"1-1",
                         "children":[]
                     },
                     {
                         "name":"角色管理",
-                        "url":"",
+                        "url":"role.html",
                         "icon":"iconfont icon-role",
-                        "id":"2222222222222222222222222",
+                        "id":"1-2",
                         "children":[]
                     },
                     {
                         "name":"用户管理",
                         "url":"",
                         "icon":"iconfont icon-user3",
-                        "id":"333333333333333333333333",
+                        "id":"1-3",
                         "children":[]
                     }
                 ]

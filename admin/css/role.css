@@ -1,0 +1,49 @@
+
+.opera{
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background: #fff;
+    padding: 10px 20px 10px 20px;
+}
+
+.opera form{
+    background: #eeeeee;
+    padding: 5px;
+    border-top:3px solid #2aabd2;
+    border-bottom: 1px solid #26A69A;
+}
+
+.opera form button{
+    line-height: 0!important;
+}
+
+.content{
+    padding-top: 0px;
+}
+
+table td{
+    vertical-align: middle!important;
+}
+
+td button{
+    height: 30px;
+    line-height: 0px!important;
+}
+
+button>i{
+    margin-right: 2px;
+}
+
+#pager{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    text-align: center;
+}
+
+#pager .layui-laypage-em{
+    background: #263238;
+}

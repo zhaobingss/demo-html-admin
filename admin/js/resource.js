@@ -30,8 +30,8 @@ function initOperaEvent() {
         layer.open({
             title:'<i class="iconfont icon-add"></i><span>添加资源</span>',
             type: 1,
-            skin: 'layui-layer-rim', //加上边框
-            area: ['100%', '100%'], //宽高
+            skin: 'layui-layer-rim',
+            area: ['70%', '80%'],
             content: content,
             btn: ['&nbsp;确定', '&nbsp;取消'],
             yes:function () {
@@ -43,16 +43,64 @@ function initOperaEvent() {
             }
         });
     });
+    $('.edit').click(function () {
+        var dialog = document.getElementById('dialog');
+        var content = dialog.innerHTML;
+        layer.open({
+            title:'<i class="iconfont icon-edit"></i><span>修改资源</span>',
+            type: 1,
+            skin: 'layui-layer-rim',
+            area: ['70%', '80%'],
+            content: content,
+            btn: ['&nbsp;确定', '&nbsp;取消'],
+            yes:function (index) {
+                var data = getDialogData();
+                alert(JSON.stringify(data));
+                addResource();
+            },
+            btn2:function () {
+                cleanDualogInput();
+            }
+        });
+    });
+    $('.delete').click(function () {
+        layer.msg('你确定删除这个资源么？', {
+            time: 0,
+            btn: ['&nbsp;确定', '&nbsp;取消'],
+            closeBtn:2,
+            shade:0.3,
+            yes: function(index){
+                alert('ok');
+                layer.close(index);
+            }
+        });
+    });
+}
+
+function addResource() {
+    $.ajax({
+        url:'',
+        type:'POST',
+        dataType:'json',
+        cache:false,
+        async:false,
+        success:function (data) {
+            
+        },
+        error:function (data) {
+            
+        }
+    });
 }
 
 function cleanDualogInput() {
-    $('.layui-layer-content #src_name').val('');
-    $('.layui-layer-content #src_type').val('');
-    $('.layui-layer-content #src_code').val('');
-    $('.layui-layer-content #src_url').val('');
-    $('.layui-layer-content #src_icon').val('');
-    $('.layui-layer-content #src_order').val('');
-    $('.layui-layer-content #src_desc').val('');
+    $('#src_name').val('');
+    $('#src_type').val('');
+    $('#src_code').val('');
+    $('#src_url').val('');
+    $('#src_icon').val('');
+    $('#src_order').val('');
+    $('#src_desc').val('');
 }
 
 function getDialogData() {
@@ -117,11 +165,16 @@ function createTrs(tbody, src, pid) {
     td_src_type.innerText   = src.type;
     td_src_desc.innerText   = src.desc;
 
+    var str = JSON.stringify(src);
+    str = JSON.parse(str);
+    delete str.children;
+
     var buttonMod = document.createElement('button');
     i = document.createElement('i');
     i.className += ' iconfont icon-edit';
     buttonMod.appendChild(i);
-    buttonMod.className += ' btn btn-sm btn-primary';
+    buttonMod.className += ' btn btn-sm btn-primary edit';
+    buttonMod.setAttribute('data', JSON.stringify(str));
     var span = document.createElement('span');
     span.innerText = '编辑';
     buttonMod.appendChild(span);
@@ -130,10 +183,11 @@ function createTrs(tbody, src, pid) {
     i = document.createElement('i');
     i.className += ' iconfont icon-delete1';
     buttonDel.appendChild(i);
-    buttonDel.className += ' btn btn-sm btn-danger';
+    buttonDel.className += ' btn btn-sm btn-danger delete';
     span = document.createElement('span');
     span.innerText = '删除';
     buttonDel.appendChild(span);
+    buttonDel.setAttribute('data', src.id);
 
     var input = document.createElement('input');
     input.setAttribute('value', src.id);

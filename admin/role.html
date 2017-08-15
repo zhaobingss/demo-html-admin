@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="">
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,height=device-height">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/facv.ico">
+
+    <title>主页</title>
+
+    <link rel="stylesheet" href="thirdpart/bootstrap-3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="thirdpart/iconfont/iconfont.css">
+    <link rel="stylesheet" href="thirdpart/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="thirdpart/layui-v1.0.9/css/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/role.css">
+
+    <!--注意这个一定要放到css的下面-->
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="thirdpart/compatible/html5shiv.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/html5shiv-printshiv.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/respond.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/respond.matchmedia.addListener.min.js"></script>
+    <script type="text/javascript" src="thirdpart/compatible/placeholders.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="opera">
+        <form class="form-inline">
+            <div class="form-group form-group-sm">
+                <button type="button" class="form-control btn btn-success" id="add"><i class="iconfont icon-cross"></i>添加角色</button>
+            </div>
+            <div class="form-group form-group-sm">
+                <label for="roleName">角色名</label>
+                <input class="form-control" id="roleName" placeholder="输入角色名">
+            </div>
+            <div class="form-group form-group-sm">
+                <button type="button" class="form-control btn btn-primary" id="search"><i class="iconfont icon-search"></i>搜索</button>
+            </div>
+        </form>
+    </div>
+    <div class="page-container">
+        <div class="page-content">
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="table-responsive tabble-wrapper">
+                        <table class="table table-condensed table-striped">
+                            <thead>
+                                <th>角色名称</th>
+                                <th>创建时间</th>
+                                <th>修改时间</th>
+                                <th>角色描述</th>
+                                <th>操作</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>超级管理员</td>
+                                    <td>2017-08-12</td>
+                                    <td>2017-08-12</td>
+                                    <td>超级管理员</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="iconfont icon-edit"></i>编辑</button>
+                                        <button class="btn btn-sm btn-success"><i class="iconfont icon-key"></i>授权</button>
+                                        <button class="btn btn-sm btn-danger"><i class="iconfont icon-delete1"></i>删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>超级管理员</td>
+                                    <td>2017-08-12</td>
+                                    <td>2017-08-12</td>
+                                    <td>超级管理员</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="iconfont icon-edit"></i>编辑</button>
+                                        <button class="btn btn-sm btn-success"><i class="iconfont icon-key"></i>授权</button>
+                                        <button class="btn btn-sm btn-danger"><i class="iconfont icon-delete1"></i>删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>超级管理员</td>
+                                    <td>2017-08-12</td>
+                                    <td>2017-08-12</td>
+                                    <td>超级管理员</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="iconfont icon-edit"></i>编辑</button>
+                                        <button class="btn btn-sm btn-success"><i class="iconfont icon-key"></i>授权</button>
+                                        <button class="btn btn-sm btn-danger"><i class="iconfont icon-delete1"></i>删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pager"></div>
+
+    <div id="dialog" style="display: none">
+        <form class="form-horizontal" id="src_form">
+            <div class="form-group">
+                <label for="src_name" class="col-sm-2 control-label">资源名称</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="src_name" placeholder="资源名称">
+                </div>
+                <label for="src_type" class="col-sm-2 control-label">资源类型</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="src_type" placeholder="资源类型">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="src_code" class="col-sm-2 control-label">资源代码</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="src_code" placeholder="资源代码">
+                </div>
+                <label for="src_url" class="col-sm-2 control-label">资源路径</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="src_url" placeholder="资源路径">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="src_icon" class="col-sm-2 control-label">资源图标</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="src_icon" placeholder="资源图标">
+                </div>
+                <label for="src_order" class="col-sm-2 control-label">资源排序</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="src_order" placeholder="资源路径">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="src_desc" class="col-sm-2 control-label">资源描述</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="src_desc" placeholder="资源描述">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="thirdpart/jquery-1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="thirdpart/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="thirdpart/layui-v1.0.9/lay/dest/layui.all.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/role.js"></script>
+</body>
+</html>
