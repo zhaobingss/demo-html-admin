@@ -42,6 +42,8 @@ button>i{
     z-index: 999;
     background: #fff;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #pager .layui-laypage-em{

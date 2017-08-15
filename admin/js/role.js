@@ -1,11 +1,11 @@
 
 $(function () {
-    adjustContentTop();
     initWindowEvent();
     initPager();
 });
 
 function initWindowEvent() {
+    adjustContentTop();
     $(window).resize(function () {
         adjustContentTop();
     });

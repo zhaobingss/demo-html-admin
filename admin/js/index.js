@@ -69,6 +69,11 @@ function initMenuEvent() {
                 var name = $(this).children('span').text();
                 addTab(url, name, id, true);
             }
+
+            var width = $('body').outerWidth();
+            if (width < 768){
+                $('.btn-close-sidebar').trigger('click');
+            }
         }
     });
 
